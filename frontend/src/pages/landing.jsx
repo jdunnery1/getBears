@@ -13,7 +13,7 @@ const Landing = () => {
         axiosInstance.get('/bears/').then((response) => {
             setBears(response.data)
         })
-    }, []);
+    }, [bears]);
 
    function convert64(file) {
         return new Promise((resolve, reject) => {
@@ -33,6 +33,7 @@ const Landing = () => {
     const handleSubmit = (e) => {
         createPost(postImage)
         document.querySelector('#file-input').value =''
+        setBears([...bears])
     }
     const handleFileUpload = async (e) => {
         const file = e.target.files[0]
