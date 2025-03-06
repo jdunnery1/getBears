@@ -48,7 +48,7 @@ const Landing = () => {
             </div>
 
             <div className={'w-3/5 h-4/5 max-sm:w-4/5 max-sm:h-3/5 bg-[#474B24] rounded-[50px] flex justify-center items-center p-5'}>
-                <img src={bears[0]?.src} alt="" className={'w-full h-full rounded-[50px]'}/>
+                <img src={bears[bears.length-1]?.src} alt="" className={'w-full h-full rounded-[50px]'}/>
             </div>
             <button className={'text-[#B8B42D] bg-[#474B24] p-5 rounded-xl'} onClick={() => {navigate('/gallery')}}>Bear Gallery</button>
         </div>
